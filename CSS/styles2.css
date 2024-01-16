@@ -1,0 +1,40 @@
+/* styles.css */
+
+/* Regla para el elemento body */
+body {
+    background-color: #E0E0E2;
+}
+
+/* Regla para el elemento h1 */
+h1 {
+    color: #721817;
+}
+
+/* Regla para el elemento h2 */
+h2 {
+    color: #721817;
+}
+
+/* Regla para la clase center-text */
+.center-text {
+    text-align: center;
+}
+
+/* Regla para el elemento con el id logo */
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Regla para todos los elementos span dentro de h2 */
+h2 span {
+    color: #FA9F42;
+    font-size: 0.75em;
+}
+
+/* Regla para el elemento con el id copyright */
+#copyright {
+    padding-top: 12px;
+    font-size: 0.75em;
+}

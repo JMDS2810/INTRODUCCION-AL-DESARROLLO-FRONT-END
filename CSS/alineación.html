@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<!--
+Conceptos básicos de alineación
+
+Alineación de texto
+
+Alinear texto dentro de un elemento HTML es muy sencillo. 
+Para ello, se utiliza la propiedad CSStext-align. En el 
+siguiente ejemplo, la regla CSS está estableciendo que el 
+texto de todos los elementos de párrafo esté alineado al 
+centro.
+p {
+    text-align: center;
+}
+La alineación del texto puede establecerse en left, right, 
+center y justify.
+La alineación justify extiende el texto para que cada línea 
+del texto tenga la misma anchura.
+La alineación por defecto es left para idiomas que son de 
+izquierda a derecha como el inglés. Para las lenguas que van 
+de derecha a izquierda, como el árabe, la alineación por 
+defecto es right.
+
+Alineación de elementos en HTML
+
+La alineación de los elementos HTML es más complicada que la 
+del texto. Para alinear elementos HTML, debe tener en cuenta 
+el modelo de caja y el flujo del documento de lecciones 
+anteriores. La alineación de un elemento HTML se realiza 
+cambiando las propiedades de su modelo de caja y cómo afecta 
+al flujo del documento.
+
+Alineación central de elementos HTML
+
+Para alinear al centro un elemento, usted establece un ancho 
+en el elemento y empuja sus márgenes hacia fuera para llenar 
+el espacio disponible restante del elemento padre como en la 
+siguiente estructura HTML:
+<div class="parent">
+  <div class="child">
+  </div>
+</div>
+En su CSS, establecerá que el elementoparent tenga un borde 
+rojo para visualizar el espacio que ocupa:
+.parent {
+  border: 4px solid red;
+}
+El elemento child tendrá una anchura igual al 50% del elemento 
+parent con un relleno de 20 píxeles. Tenga en cuenta que 
+padding: 20px es la forma abreviada de establecer el relleno 
+superior, inferior, izquierdo y derecho en 20px. Para 
+visualizar el espacio que ocupa, establezca el borde en verde:
+.child {
+  width: 50%;
+  padding: 20px;
+  border: 4px solid green;
+}
+Para alinear el elemento al centro, establezca su propiedad 
+margin en auto. auto indicará al navegador que calcule 
+automáticamente el margen en función del espacio disponible.
+.child {
+  width: 50%;
+  padding: 20px;
+  border: 4px solid green;
+  margin: auto;
+}
+El resultado es que el elemento child queda centrado dentro del 
+elemento parent:
+
+Es importante señalar que esto funciona porque el elementodiv es un elemento a nivel de bloque.  
+
+Si desea alinear un elemento en línea como img, tendrá que cambiarlo
+ a un elemento a nivel de bloque. De forma similar al ejemplo de div,
+  añada el elemento img a un elemento padre:
+<div class="parent">
+  <img src="photo.png" class="child">
+</div>
+La regla CSS cambia entonces el elemento img a un elemento a nivel 
+de bloque y establece su margen en auto:
+.child {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+Para ser más precisos, en CSS sólo puede establecer los márgenes 
+izquierdo y derecho en automático. Esto le permite establecer los 
+márgenes superior e inferior a valores específicos si es necesario.
+.child {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+Alineación izquierda / derecha de elementos HTML
+
+Las dos formas más comunes de alinear los elementos a izquierda y 
+derecha son utilizar la propiedad float y la propiedad position.
+La propiedadposition tiene varias opciones de valor que influyen 
+en cómo se muestra el elemento en el flujo del documento. Más 
+adelante veremos cómo utilizar la propiedad position. Por ahora, 
+centrémonos en la propiedad float.
+La propiedad float establece la posición de un elemento en relación
+con el contenido de texto dentro de un elemento padre. El texto se 
+envolverá alrededor del elemento.
+En el siguiente ejemplo, la imagen se alineará a la derecha del 
+elementodiv. El contenido de texto se envolverá alrededor de la 
+imagen:
+HTML
+<div class="parent">
+  <img src="photo.png" class="child"> Lorem ipsum dolor sit amet, 
+</div>
+CSS
+.child {
+  float: right;
+}
+-->
+</html>
