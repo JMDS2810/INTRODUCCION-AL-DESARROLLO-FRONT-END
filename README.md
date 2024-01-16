@@ -712,7 +712,8 @@ Estas reglas CSS aplican estilos adicionales para la sección de Tarea 1:
 - Los elementos de lista (`ul`, `ol`) no mostrarán viñetas ni números.
 - Los elementos de lista (`li`) tendrán un fondo azul claro (`#F0F8FF`), márgenes y relleno específicos.
 
-**Manejo de Dependencias, Gestores de Paquetes y Bundling en Desarrollo Front-End**
+## Manejo de Dependencias, Gestores de Paquetes y Bundling en Desarrollo Front-End
+
 1. **Dependencias:**
    - Se define como dependencias a las bibliotecas y frameworks utilizados en una aplicación, ya que la aplicación depende de ellos.
    - En el desarrollo front-end, estas dependencias se incorporan haciendo referencia a archivos JavaScript o CSS en el archivo HTML.
@@ -729,7 +730,8 @@ Estas reglas CSS aplican estilos adicionales para la sección de Tarea 1:
    - Un bundler combina automáticamente todas las dependencias en un solo archivo o en varios bundles.
    - Herramientas comunes de bundling incluyen Gulp y Webpack.
 
-**Diseño Responsivo en Desarrollo Web**
+## Diseño Responsivo en Desarrollo Web
+
 1. **Diseño Responsivo:**
    - Permite la adaptación automática de una página web según la pantalla en la que se visualiza.
    - Implica ajustar la página para proporcionar la mejor experiencia de usuario en una variedad de dispositivos.
@@ -747,8 +749,8 @@ Estas reglas CSS aplican estilos adicionales para la sección de Tarea 1:
 5. **Importancia del Diseño Responsivo:**
    - Es esencial para asegurar que los sitios web se visualicen correctamente en una variedad de dispositivos con diferentes resoluciones.
 
-**Bootstrap**
-**Resumen:**
+## Bootstrap
+
 Bootstrap se define como una "biblioteca de código CSS y JavaScript" que permite construir sitios web visualmente atractivos de manera rápida y eficiente. Considerado como un marco front-end, Bootstrap proporciona componentes reutilizables y reglas predefinidas para crear rápidamente páginas web con capacidad de respuesta.
 **Principales Puntos:**
 1. Bootstrap es una biblioteca de código CSS y JavaScript que facilita la construcción rápida de sitios web atractivos visualmente.
@@ -759,7 +761,7 @@ Bootstrap se define como una "biblioteca de código CSS y JavaScript" que permit
 6. Aprender Bootstrap es valioso en la industria de desarrollo web, ya que es un requisito común en muchas empresas. Facilita la transición entre equipos y proyectos sin necesidad de aprender nuevos enfoques.
 7. La lección introductoria proporciona los conceptos básicos de Bootstrap y enseña a construir páginas web utilizando esta biblioteca.
 
-**Clases CSS de Bootstrap**
+## Clases CSS de Bootstrap
 Introducción a las clases CSS de Bootstrap llamadas in fixes y modificadores, que son esenciales para el diseño responsivo y la personalización de estilos. Se destacan cómo estos elementos permiten ahorrar tiempo en el desarrollo web al adaptar el diseño a diferentes tamaños de pantalla y aplicar estilos específicos.
 
 Puntos Clave:
@@ -770,7 +772,7 @@ Puntos Clave:
 - Los modificadores en Bootstrap permiten personalizar estilos, como cambiar colores o estilos de elementos predefinidos.
 - Se presenta un ejemplo práctico utilizando las clases de alerta de Bootstrap, donde se aplican modificadores para cambiar los colores de las alertas (primario, secundario, éxito, información, advertencia, peligro, claro, oscuro).
 
-**Rejilla adaptable**
+## Rejilla adaptable
 Abarca la importancia de esta y de los puntos de ruptura para crear páginas web con diseño receptivo. Bootstrap ofrece un sistema de rejilla de 12 columnas que puede ser fluido o fijo. Se explica que la estructura básica de Bootstrap incluye un contenedor, filas y columnas, y se demuestra cómo configurar estas columnas para diferentes dispositivos y tamaños de pantalla.
 
 Puntos Clave:
@@ -782,13 +784,13 @@ Puntos Clave:
 - Bootstrap facilita el diseño responsivo al permitir que el contenido se apile verticalmente en dispositivos móviles y se muestre en columnas en dispositivos de escritorio.
 - Se muestra cómo utilizar reglas específicas de punto de ruptura (como LG para escritorio) y sufijos numéricos para definir el comportamiento de las columnas.
 
-**Contenido estático y dinámico**
+## Contenido estático y dinámico
 Se ve la diferencia entre contenido estático y dinámico, así como la distinción entre servidores web y servidores de aplicaciones. El contenido estático se transfiere tal como está almacenado en el servidor web, mientras que el contenido dinámico se genera en respuesta a una solicitud HTTP, basándose en las entradas del usuario o la fecha actual.
 Cuando un usuario abre un sitio web, el servidor web envía el contenido al navegador. Si es contenido estático, se transfiere directamente. Para contenido dinámico, el servidor web se comunica con un servidor de aplicaciones, que genera el contenido dinámico y lo envía al navegador.
 Se destaca que el contenido dinámico suele tardar más en generarse que el contenido estático debido al procesamiento más complejo de los servidores de aplicaciones, que ejecutan la lógica de la aplicación, se comunican con bases de datos y verifican permisos.
 A pesar de la capacidad limitada de los servidores de aplicaciones, el almacenamiento en caché es utilizado por los servidores web para mejorar el rendimiento. La caché almacena una copia del contenido dinámico para evitar regenerarlo en cada solicitud. Esto reduce la carga en los servidores de aplicaciones, ya que el servidor web puede devolver inmediatamente el contenido almacenado en caché.
 
-**Aplicaciones de una sola página (SPA)**
+## Aplicaciones de una sola página (SPA)
 Se ven las aplicaciones de una sola página (SPA) y su diferencia con los sitios web tradicionales. Comenzamos destacando la prevalencia de SPAs en aplicaciones populares como redes sociales, aplicaciones de mensajería y aplicaciones de mapas debido a su experiencia de usuario única y rápida.
 Se explica que los sitios web tradicionales, antes de los frameworks JavaScript modernos, se implementaban como aplicaciones multipágina, consumiendo muchos recursos del servidor y resultando en una experiencia de navegación lenta. Las SPAs resuelven este problema al tener una única página HTML que se actualiza dinámicamente a medida que los usuarios interactúan con el sitio.
 Se describen dos enfoques para servir el código y los recursos en una SPA: agrupación y carga perezosa. La agrupación implica cargar todo el HTML, CSS y JavaScript necesario inmediatamente, mientras que la carga perezosa implica cargar solo lo mínimo necesario y descargar recursos adicionales según sea necesario.
