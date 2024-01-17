@@ -793,5 +793,94 @@ A pesar de la capacidad limitada de los servidores de aplicaciones, el almacenam
 ## Aplicaciones de una sola página (SPA)
 Se ven las aplicaciones de una sola página (SPA) y su diferencia con los sitios web tradicionales. Comenzamos destacando la prevalencia de SPAs en aplicaciones populares como redes sociales, aplicaciones de mensajería y aplicaciones de mapas debido a su experiencia de usuario única y rápida.
 Se explica que los sitios web tradicionales, antes de los frameworks JavaScript modernos, se implementaban como aplicaciones multipágina, consumiendo muchos recursos del servidor y resultando en una experiencia de navegación lenta. Las SPAs resuelven este problema al tener una única página HTML que se actualiza dinámicamente a medida que los usuarios interactúan con el sitio.
+
+## Introducción a React
+Se mencionarán algunos puntos clave relacionados con React:
+
+1. **Propósito y Popularidad de React:**
+   - React se centra en simplificar la construcción de interfaces de usuario funcionales tanto para aplicaciones web como móviles.
+   - Es una biblioteca de código abierto, ampliamente utilizada desde su lanzamiento en 2013, respaldada por una activa comunidad de colaboradores y empresas.
+
+2. **Desarrollo de Aplicaciones con React:**
+   - React se utiliza para desarrollar aplicaciones de una sola página y, con React Native, también es aplicable en el desarrollo de aplicaciones móviles.
+   - Se destaca la importancia de combinar React con otras bibliotecas JavaScript para abordar aspectos como navegación y solicitudes de datos a servidores web.
+
+3. **Eficiencia y Mantenimiento del Código:**
+   - React permite a los desarrolladores escribir menos código para lograr funcionalidad, facilitando el mantenimiento a largo plazo y simplificando las pruebas.
+   - Su enfoque en componentes modulares facilita el desarrollo, la prueba aislada y la reutilización de partes de la aplicación.
+
+4. **Ejemplo Práctico de Componentes en React:**
+   - Los componentes en React son piezas de interfaz de usuario, como reproductores de música o galerías de fotos.
+   - Se ilustra con un ejemplo práctico de cómo un componente de icono de usuario puede reutilizarse en diversas secciones de una aplicación que requieren una imagen de perfil.
+
+5. **Librerías de Componentes Prefabricados:**
+   - Se menciona la existencia de bibliotecas de código abierto que ofrecen componentes prefabricados para proyectos React.
+   - Estas bibliotecas facilitan la incorporación de funcionalidades específicas, como reproductores de vídeo o mapas, sin tener que programar desde cero.
+
+6. **Crecimiento Continuo de la Comunidad React:**
+   - La comunidad React sigue creciendo y mejorando con nuevas características y mejoras continuas.
+   - Se destaca la importancia de las conferencias anuales de React para el intercambio de conocimientos y la introducción de desarrollos futuros.
+
 Se describen dos enfoques para servir el código y los recursos en una SPA: agrupación y carga perezosa. La agrupación implica cargar todo el HTML, CSS y JavaScript necesario inmediatamente, mientras que la carga perezosa implica cargar solo lo mínimo necesario y descargar recursos adicionales según sea necesario.
-Se proporciona un ejemplo que compara cómo una SPA y un sitio web tradicional manejan la actualización de contenido al hacer clic en un botón y al navegar entre páginas. En una SPA, se envía una solicitud al servidor web, que devuelve un objeto JSON con los datos necesarios, actualizando solo la parte relevante de la página. Esto contrasta con un sitio web tradicional, que devuelve una página web completa.
+
+## Funcionamiento de React
+
+Veremos la relación entre los componentes de React y el DOM del navegador, destacando la problemática de las actualizaciones costosas del DOM. Se da entender el concepto del DOM virtual de React, el cual es una representación en memoria de la estructura del DOM del navegador. Este DOM virtual se utiliza para actualizar el DOM del navegador de manera eficiente, evitando actualizaciones innecesarias y mejorando el rendimiento de la aplicación.
+
+El proceso de reconciliación de React, es el proceso donde se compara el DOM virtual actual con la versión anterior para determinar los elementos que han experimentado cambios. La eficiencia radica en que solo los elementos modificados se actualizan en el DOM del navegador, lo que contribuye a la velocidad y respuesta de la aplicación.
+
+En conclusión, React construye y actualiza un DOM virtual, lo que permite al navegador actualizar solo ciertos elementos HTML en lugar de recrear la página completa, optimizando así el rendimiento y la eficiencia de las aplicaciones desarrolladas con esta biblioteca.
+
+## DOM Virtual
+
+Se entiende que React construye una representación en memoria del Modelo de Objetos del Documento (DOM) del navegador, conocida como DOM virtual. Durante la actualización de los componentes, React verifica si el código HTML en el DOM virtual coincide con el DOM del navegador. Si se detecta un cambio, se actualiza el DOM del navegador; de lo contrario, no se realiza ninguna actualización.
+
+El proceso de reconciliación consta de varios pasos:
+
+1. **Actualización del DOM virtual:** Los componentes y sus cambios se reflejan en el DOM virtual.
+  
+2. **Comparación del DOM virtual:** Se compara el DOM virtual actual con la versión anterior para identificar elementos modificados.
+
+3. **Actualización del DOM del navegador:** Solo los elementos modificados se actualizan en el DOM del navegador.
+
+4. **Actualización de la página web:** La página web visualizada se ajusta según el DOM del navegador.
+
+Este proceso de reconciliación minimiza las actualizaciones costosas del DOM del navegador, mejorando así el rendimiento de la aplicación web. Para abordar posibles problemas de rendimiento, React introdujo la Arquitectura Fiber. Esta arquitectura permite a React realizar actualizaciones incrementales en lugar de actualizar inmediatamente todo el DOM del navegador. La idea es priorizar las actualizaciones según la visibilidad para el usuario, optimizando el rendimiento y la respuesta a la entrada del usuario.
+
+Aunque la interacción directa con el DOM virtual y la Arquitectura Fiber es poco común, es esencial comprender estos conceptos para abordar problemas durante el desarrollo. Herramientas como React Developer Tools facilitan la investigación del procesamiento de la página web en React, ofreciendo una visión más profunda del código y ayudando en el desarrollo. Estas herramientas se explorarán con mayor detalle en secciones posteriores.
+
+## Jerarquía de componentes
+
+Se analiza el proceso de planificación de aplicaciones utilizando React, centrándonos en la comprensión de la jerarquía de componentes. Se resalta la eficiencia y rapidez que proporciona el desarrollo de interfaces de usuario mediante bibliotecas de JavaScript como React. A medida que se avanza en la planificación de aplicaciones como una serie de componentes, se destaca la familiaridad que se desarrolla con la práctica continua.
+
+Se introduce la idea de que cada aplicación React tiene al menos un componente raíz, conocido como el componente de la aplicación, y cómo se pueden agregar componentes secundarios para crear una estructura en árbol que define la aplicación. El texto utiliza un ejemplo práctico relacionado con una lista de artículos de supermercado para ilustrar este concepto, presentando el componente de la aplicación y componentes secundarios para añadir y mostrar elementos de la lista.
+
+La capacidad de reutilizar componentes en React se destaca como un punto clave, mostrando cómo un componente puede ser empleado para mostrar varios elementos de la lista con facilidad. Se puede estructurar un sitio web de blog con componentes, desde el componente de la aplicación hasta componentes secundarios como Navbar y Page.
+
+La flexibilidad y ventajas de la reutilización de código en React se subrayan al ilustrar cómo un mismo componente puede utilizarse con propiedades diferentes para personalizar instancias específicas. A pesar de la posible complejidad inicial en la planificación de jerarquías de componentes, se sugiere que con la práctica repetida, los desarrolladores apreciarán la utilidad y practicidad de este enfoque en el desarrollo de aplicaciones con React.
+
+## Alternativas a React
+
+React es una biblioteca y no un framework. Esto significa que a menudo utilizará otras bibliotecas JavaScript con él para construir su aplicación. En esta lectura, se le presentarán brevemente algunas bibliotecas JavaScript utilizadas habitualmente con React.
+
+**Lodash** https://lodash.com/
+
+Como desarrollador, hay mucha lógica que escribirá comúnmente en las aplicaciones. Por ejemplo, puede que necesite ordenar una lista de elementos o redondear un número como 3.14 a 3. Lodash proporciona lógica común como éstas como una biblioteca de utilidades para ahorrarle tiempo como desarrollador.
+
+**Luxon** https://moment.github.io/luxon/#/
+
+Como desarrollador, trabajará a menudo con fechas y horas. Piense en ver una lista de pedidos y cuándo se realizaron, o en mostrar el calendario de un evento. Las fechas y las horas están en todas partes.
+
+Luxon le ayuda a trabajar con fechas y horas proporcionando funciones para manipularlas y mostrarlas. Por ejemplo, piense en cómo se formatean las fechas en los distintos países. En Estados Unidos el formato es Month Day Year pero en Europa es Day Month Year. Esta es un área en la que Luxon puede ayudarle a mostrar la fecha en el formato local del usuario.
+
+**Redux** https://redux.js.org/
+
+Cuando construya una aplicación web, necesitará hacer un seguimiento de su estado. Piense en cuando compra en línea. La aplicación web realiza un seguimiento de los artículos que se encuentran actualmente en su cesta de la compra. Cuando retira un artículo del carrito, la aplicación necesita actualizar lo que aparece en la pantalla. Aquí es donde entra Redux. Le ayuda a gestionar el estado de su aplicación e incluso tiene funciones avanzadas como deshacer y rehacer.
+
+**Axios** https://axios-http.com/
+
+Como desarrollador, se comunicará frecuentemente con API a través de HTTP. La biblioteca Axios le ayuda a simplificar el envío de peticiones HTTP y el procesamiento de la respuesta. También proporciona funciones avanzadas que le permiten cancelar peticiones y modificar los datos recibidos del servidor web antes de que su aplicación los utilice.
+
+**Jest** https://jestjs.io/
+
+Como desarrollador profesional, es una buena práctica escribir pruebas automatizadas para su código. La biblioteca jest le ayuda a hacerlo y funciona con muchas bibliotecas y frameworks. También proporciona utilidades de generación de informes, como proporcionar información sobre qué parte de su código es comprobada por sus pruebas automatizadas.
